@@ -1,0 +1,11 @@
+<p style="color:green"><%= notice %></p>
+
+<h2><%= @article.title %></h2>
+
+<p><%= @article.body %></p>
+
+<div class="btn-container">
+    <button class="navigation-btn"><%= link_to "Edit post", edit_article_path(@article), class: "navigation-link" %></button>
+    <%= button_to "Destroy article", @article, method: :delete, class:"navigation-btn navigation-link" %>
+    <button class="navigation-btn"><%= link_to "Back to articles", articles_path, class: "navigation-link" %></button>
+</div>

@@ -2,7 +2,7 @@ class Article < ApplicationRecord
     validates :title, presence: true
     validates :body, length: {maximum: 1000, message: "Maximum of 1000 characters"}
 
-    validates :author_name, presence: true, format: { with: /^[a-zA-Z]+(?: [a-zA-Z]+)+$/, message: "Please input author's first name and last name." }
+    # validates :author_name, presence: true, format: { with: /^[a-zA-Z]+(?: [a-zA-Z]+)+$/, message: "Please input author's first name and last name." }
     # This regex will match names like "John Smith", "Mary Ann Jones", "Jean-Luc Picard", etc., where there can be one or 
     # more first names separated by spaces, followed by a last name.
 

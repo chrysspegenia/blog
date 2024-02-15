@@ -1,0 +1,35 @@
+<h1>hello world</h1>
+
+<p style="color:green"><%= notice %></p>
+
+<table>
+    <thead>
+        <th style="color: red;">ID</th>
+        <th style="font-size: 30px;">Title</th> 
+        <th>Body</th>
+        <th>Created at</th>
+        <th>Uploaded at</th>
+        <th>Author Name</th>
+        <th>Author Age</th>
+    </thead>
+
+    <tbody>
+        <% @articles.each do |article| %>
+            <tr>
+             <!--<tr onclick="window.location='/articles/<%= article.id %>';">-->
+                    <td><%= link_to article.id, article %></td> <!--link_to renders a link with its first argument as the link's text and its second argument as the link's destination-->
+                    <td><%= link_to article.title, article %></td>
+                    <td><%= link_to article.body, article %></td>
+                    <td><%= article.created_at %></td>
+                    <td><%= article.updated_at %></td>
+                    <td><%= article.author_name %></td>
+                    <td><%= article.author_age %></td>
+            </tr>
+        <% end %>
+    </tbody>
+
+</table>
+
+<div>
+    <button class="navigation-btn"><%= link_to "New article", new_article_path, class:"navigation-link" %></button>
+</div>

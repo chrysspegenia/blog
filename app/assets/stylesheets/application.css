@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .navigation-link{
+    text-decoration: none;
+    color:orangered;
+ }
+
+ .navigation-link:hover{
+    color:rgb(230,230,230);
+ }
+
+ .navigation-btn{
+    /* width:100px; */
+    height:20px;
+    background-color:rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border:none;
+ }
+
+ .navigation-btn:hover{
+    background-color: orangered;
+ }
+
+ .btn-container{
+    display:flex;
+ }
